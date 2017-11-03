@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     class:'md-g md-g--mobile--childs '
   },
   templateUrl: './formularz.component.html',
-  styleUrls: ['./formularz.component.css']
+  styleUrls: ['./formularz.component.scss']
 })
 export class FormularzComponent implements OnInit {
 
