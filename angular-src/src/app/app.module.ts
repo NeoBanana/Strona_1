@@ -8,6 +8,8 @@ import { RouterModule, Routes} from '@angular/router';
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormularzComponent } from './components/formularz/formularz.component';
+
 
 // Services
 import {ValidateService} from './services/validate.service';
@@ -16,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
+  {path:'formularz',component: FormularzComponent},
 ]
 
 @NgModule({
@@ -23,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    FormularzComponent
   ],
   imports: [
     BrowserModule,
