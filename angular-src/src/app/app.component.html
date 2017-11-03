@@ -1,11 +1,12 @@
 
-<nav class="main-navigation  md-dp6"><app-navbar></app-navbar></nav>
+<nav ><app-navbar></app-navbar></nav>
         <div class="wrapper">
             <header><app-header></app-header></header>
-            <main>
-                
-             <router-outlet> </router-outlet>
-                
+            <main class="md-g md-g--mobile--childs">
+                <app-sidemenu></app-sidemenu>
+                <div class="md-g  md-g--cs2 ">
+             <router-outlet class="md-g--r1"> </router-outlet>
+            </div>
             </main>
         </div>
 <footer><app-footer></app-footer></footer>

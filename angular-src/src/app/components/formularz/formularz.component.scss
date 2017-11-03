@@ -1,1 +1,23 @@
+@import '../../../assets/variables';
 
+form fieldset {
+    padding: 10px;
+    border: 3px solid $supportColor;
+    margin-bottom: 10px;
+  }
+  
+  form table {
+    width: 100%;
+  }
+  
+  form legend {
+    border: 2px solid $supportColor;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  form textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+  }

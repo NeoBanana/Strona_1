@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormularzComponent} from './components/formularz/formularz.component';
+import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 
  
 
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
-    FormularzComponent
+    FormularzComponent,
+    SidemenuComponent
   ],
   imports: [
     BrowserModule,

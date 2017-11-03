@@ -1,0 +1,16 @@
+@import '../../../assets/variables';
+:host {
+    z-index: 2;
+  }
+ ul {
+    width: 100%;
+    padding: 5px;
+  }
+ ul li {
+    padding: 5px;
+    background-color: $basicColor*1.2;
+    color: white;
+  }
+ ul li:hover {
+    background-color: $basicColor*1.4;
+  }

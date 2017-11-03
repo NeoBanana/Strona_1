@@ -4,3 +4,23 @@
     grid-template-rows: minmax(60px, max-content) minmax(300px, max-content) 1fr 70px;
     grid-gap: 20px;
 }
+
+:host .wrapper {
+    margin: 0 10px;
+    grid-row: 2;
+    width: calc(100% - 20px);
+    display: grid;
+    grid-template-rows: minmax(200px, max-content) minmax(300px, max-content);
+    grid-gap: 10px;
+  }
+  
+  :host .wrapper header {
+    grid-row: 1;
+    background-size: 100% 100%;
+  }
+  :host .wrapper main { 
+    grid-row: 2;
+  }
+  :host footer{
+    grid-row: 4;
+  }
