@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class StronaKonkursPage {
+export class AngularSrc2Page {
   navigateTo() {
     return browser.get('/');
   }

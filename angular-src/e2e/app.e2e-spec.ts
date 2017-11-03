@@ -1,10 +1,10 @@
-import { StronaKonkursPage } from './app.po';
+import { AngularSrc2Page } from './app.po';
 
-describe('strona-konkurs App', function() {
-  let page: StronaKonkursPage;
+describe('angular-src2 App', function() {
+  let page: AngularSrc2Page;
 
   beforeEach(() => {
-    page = new StronaKonkursPage();
+    page = new AngularSrc2Page();
   });
 
   it('should display message saying app works', () => {

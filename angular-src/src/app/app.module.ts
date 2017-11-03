@@ -16,7 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormularzComponent} from './components/formularz/formularz.component';
 
-
+ 
 
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
