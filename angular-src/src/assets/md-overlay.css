@@ -1,0 +1,23 @@
+.md-card__header {
+  background-color: #28b4ff;
+}
+
+.md-card__footer {
+  background-color: #009688;
+}
+
+[class^="md-b"] {
+  background-color: #00786d;
+}
+
+[class^="md-b"]:hover {
+  background-color: #00b4a3;
+}
+
+.md-i--l {
+  background-color: #009688;
+  color: white;
+}
+ 
+
+ /*# sourceMappingURL= md-overlay.css.map */

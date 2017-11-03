@@ -1,0 +1,6 @@
+:host{
+    min-height: 100%;
+    display:grid;
+    grid-template-rows: minmax(60px, max-content) minmax(300px, max-content) 1fr 70px;
+    grid-gap: 20px;
+}
