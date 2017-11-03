@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/variables';
+
+html {
+    height: 100%;
+  } 
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background: $backgroundColor;
+    * {
+        box-sizing: border-box;
+        font-family: "Dosis", sans-serif;
+      }
+  }
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  ul li,
+  ol li {
+    padding: 0;
+    margin: 0;
+  }
+  .floatLeft {
+    float: left;
+  }
+  .floatRight {
+    float: right;
+  }

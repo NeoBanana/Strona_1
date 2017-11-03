@@ -1,1 +1,10 @@
+@import '../../../assets/variables';
 
+:host{
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: grey;
+    color: lightgrey;
+    display: flex;
+  }
