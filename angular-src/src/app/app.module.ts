@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormularzComponent} from './components/formularz/formularz.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
  
 
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     FooterComponent,
     HeaderComponent,
     FormularzComponent,
-    SidemenuComponent
+    SidemenuComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
