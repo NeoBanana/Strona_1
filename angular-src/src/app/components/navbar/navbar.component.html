@@ -1,19 +1,19 @@
 <ul class="menu">   
           <li *ngFor="let item of menu" [ngClass]="{'menu-item-has-children':item.submenu.length>0}"  ><!-- if item has submenu items add class-->
-              <a *ngIf="item.internalLink" routerLink={{item.address}}>{{item.name }}</a><!-- ROUTER redirect-->
-              <a *ngIf="!item.internalLink" href="{{item.address}}">{{item.name }}</a><!-- external url redirect-->
+              <a *ngIf="item.address.indexOf('/')==0 || item.address.indexOf('#')==0 " routerLink={{item.address}}>{{item.name  }}</a><!-- ROUTER redirect-->
+              <a *ngIf="item.address.indexOf('http')==0 " href="{{item.address}}">{{item.name }}</a><!-- external url redirect-->
 
               <ul class="sub-menu" *ngIf="item.submenu.length>0"><!-- if item has submenu items show them-->
                   <li *ngFor="let item1 of item.submenu" [ngClass]="{'menu-item-has-children':item1.submenu.length>0}"><!-- if item has submenu items add class-->
 
-                      <a *ngIf="item1.internalLink" routerLink={{item1.address}}>{{item1.name }}</a><!-- ROUTER redirect-->
-                      <a *ngIf="!item1.internalLink" href="{{item1.address}}">{{item1.name }}</a><!-- external url redirect-->
+                      <a *ngIf="item1.address.indexOf('/')==0 || item1.address.indexOf('#')==0" routerLink={{item1.address}}>{{item1.name }}</a><!-- ROUTER redirect-->
+                      <a *ngIf="item1.address.indexOf('http')==0 " href="{{item1.address}}">{{item1.name }}</a><!-- external url redirect-->
 
                       <ul class="sub-menu" *ngIf="item1.submenu.length>0"><!-- if item has submenu items show them-->
                             <li *ngFor="let item2 of item1.submenu">
 
-                              <a *ngIf="item2.internalLink" routerLink={{item2.address}}>{{item2.name }}</a><!-- ROUTER redirect-->
-                              <a *ngIf="!item2.internalLink" href="{{item2.address}}">{{item2.name }}</a><!-- external url redirect-->
+                              <a *ngIf="item2.address.indexOf('/')==0 || item2.address.indexOf('#')==0 " routerLink={{item2.address}}>{{item2.name }}</a><!-- ROUTER redirect-->
+                              <a *ngIf="item2.address.indexOf('http')==0 " href="{{item2.address}}">{{item2.name}}</a><!-- external url redirect-->
                               
                             </li>
                         </ul>

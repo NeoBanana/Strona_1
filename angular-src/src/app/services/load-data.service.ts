@@ -12,52 +12,43 @@ export class LoadDataService {
     [
       {
         name:"Strona Główna",
-        internalLink:true,
         address:"/",
         submenu:[]
       },
       {
         name:"Edycje",
-        internalLink:true,
         address:"#",
         submenu:[
           {
             name:"EDYCJA XIX",
-            internalLink:true,
             address:"#",
             submenu:[
               {
                 name:"Statystyki",
-                internalLink:true,
                 address:"#"
               },
               {
                 name:"Wyniki",
-                internalLink:true,
                 address:"#"
               }
             ]
           },
           {
             name:"EDYCJA XVIII",
-            internalLink:true,
             address:"#",
             submenu:[
               {
                 name:"Statystyki",
-                internalLink:true,
                 address:"#"
               },
               {
                 name:"Wyniki",
-                internalLink:true,
                 address:"#"
               }
             ]
           },
           {
             name:"EDYCJA XVII",
-            internalLink:true,
             address:"#",
             submenu:[
               {
@@ -72,31 +63,31 @@ export class LoadDataService {
           },
           {
             name:"EDYCJA XVI",
-            internalLink:true,
             address:"#",
             submenu:[
               {
                 name:"Statystyki",
-                internalLink:true,
                 address:"#"
               },
               {
                 name:"Wyniki",
-                internalLink:true,
                 address:"#"
               }
             ]
+          },
+          {
+            name:"Poprzednie Edycje",
+            address:"http://www.google.pl",
+            submenu:[]
           }
         ]
       },
       {
         name:"Zgłoś się",
-        nternalLink:true,
         address:"#",
         submenu:[
           {
             name:"Formularz",
-            internalLink:true,
             address:"/formularz",
             submenu:[]
           }
@@ -108,14 +99,12 @@ export class LoadDataService {
         submenu:[
           {
             name:"Komitet Krajowy",
-            internalLink:false,
             address:'https://www.w3schools.com/angular/angular_http.asp',
             
             submenu:[]
           },
           {
             name:"Komitety Regionalne",
-            internalLink:true,
             address:"#",
             submenu:[]
           }
