@@ -1,56 +1,28 @@
+<ul class="menu">   
+          <li *ngFor="let item of menu" [ngClass]="{'menu-item-has-children':item.submenu.length>0}"  ><!-- if item has submenu items add class-->
+              <a *ngIf="item.internalLink" routerLink={{item.address}}>{{item.name }}</a><!-- ROUTER redirect-->
+              <a *ngIf="!item.internalLink" href="{{item.address}}">{{item.name }}</a><!-- external url redirect-->
 
-  <ul class="menu">
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/formularz">formularz</a>
-    </li>
-    <li class="menu-item-has-children">
-      <a href="#">Services</a>
-      <ul class="sub-menu">
-          <li>
-              <a href="#">Plumbing</a>
-          </li>
-          <li class="menu-item-has-children">
-              <a href="#">Heating</a>
-              <ul class="sub-menu">
-                <li>
-                  <a href="#">Residential</a>
-                </li>
-                <li>
-                  <a href="#">Commercial</a>
-                </li>
-                <li>
-                  <a href="#">Industrial</a>
-                  <li class="menu-item-has-children">
-                    <a href="#">Heating</a>
-                    <ul class="sub-menu">
-                      <li>
-                        <a href="#">Residential</a>
-                      </li>
-                      <li>
-                        <a href="#">Commercial</a>
-                      </li>
-                      <li>
-                        <a href="#">Industrial</a>
-                      </li>
-                      </ul>
-                      </li>
+              <ul class="sub-menu" *ngIf="item.submenu.length>0"><!-- if item has submenu items show them-->
+                  <li *ngFor="let item1 of item.submenu" [ngClass]="{'menu-item-has-children':item1.submenu.length>0}"><!-- if item has submenu items add class-->
 
+                      <a *ngIf="item1.internalLink" routerLink={{item1.address}}>{{item1.name }}</a><!-- ROUTER redirect-->
+                      <a *ngIf="!item1.internalLink" href="{{item1.address}}">{{item1.name }}</a><!-- external url redirect-->
 
-                </ul>
+                      <ul class="sub-menu" *ngIf="item1.submenu.length>0"><!-- if item has submenu items show them-->
+                            <li *ngFor="let item2 of item1.submenu">
+
+                              <a *ngIf="item2.internalLink" routerLink={{item2.address}}>{{item2.name }}</a><!-- ROUTER redirect-->
+                              <a *ngIf="!item2.internalLink" href="{{item2.address}}">{{item2.name }}</a><!-- external url redirect-->
+                              
+                            </li>
+                        </ul>
+                    </li>
+                </ul>   
           </li>
-                    
-          <li>
-            <a href="#">Electrical</a>
-          </li>
+        <li class="login">
+           <a href="/login">Zaloguj się</a>
+        </li>
+    
       </ul>
-    </li>
-    <li>
-      <a href="#">Pricing</a>
-    </li>
-    <li class="login">
-      <a href="#">Contact Us</a>
-    </li>
-  </ul>
+    

@@ -7,6 +7,7 @@ import { RouterModule, Routes} from '@angular/router';
 
 // Services
 import {ValidateService} from './services/validate.service';
+import {LoadDataService} from './services/load-data.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -40,7 +41,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ValidateService],
+  providers: [ValidateService,LoadDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

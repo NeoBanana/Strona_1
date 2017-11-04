@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LoadDataService} from '../../services/load-data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  public menu ;
 
-  constructor() { }
+  constructor(private LoadDataService: LoadDataService) {
+     this.menu=  this.LoadDataService.LoadMainMenu();
+
+   }
+
 
   ngOnInit() {
+    
   }
 
 }
