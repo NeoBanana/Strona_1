@@ -1,1 +1,9 @@
 @import '../../../assets/variables';
+.md-card{
+    max-height: 500px;
+}
+.md-card__content{
+    margin: 0;
+    font-size: 0.9em;
+
+}
