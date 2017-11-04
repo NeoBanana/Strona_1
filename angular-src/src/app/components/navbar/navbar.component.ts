@@ -10,10 +10,11 @@ import {LoadDataService} from '../../services/load-data.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  public menu;
-  
+  public menu ;
+
   constructor(private LoadDataService: LoadDataService) {
      this.menu=  this.LoadDataService.LoadMainMenu();
+
    }
 
 

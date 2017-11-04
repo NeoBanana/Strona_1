@@ -11,92 +11,113 @@ export class LoadDataService {
     let menu=
     [
       {
-        "name":"Strona Główna",
-        "address":"/"
+        name:"Strona Główna",
+        internalLink:true,
+        address:"/",
+        submenu:[]
       },
       {
-        "name":"Edycje",
-        "address":"#",
-        "submenu":[
+        name:"Edycje",
+        internalLink:true,
+        address:"#",
+        submenu:[
           {
-            "name":"EDYCJA XIX",
-            "address":"#",
-            "submenu":[
+            name:"EDYCJA XIX",
+            internalLink:true,
+            address:"#",
+            submenu:[
               {
-                "name":"Statystyki",
-                "address":"#"
+                name:"Statystyki",
+                internalLink:true,
+                address:"#"
               },
               {
-                "name":"Wyniki",
-                "address":"#"
+                name:"Wyniki",
+                internalLink:true,
+                address:"#"
               }
             ]
           },
           {
-            "name":"EDYCJA XVIII",
-            "address":"#",
-            "submenu":[
+            name:"EDYCJA XVIII",
+            internalLink:true,
+            address:"#",
+            submenu:[
               {
-                "name":"Statystyki",
-                "address":"#"
+                name:"Statystyki",
+                internalLink:true,
+                address:"#"
               },
               {
-                "name":"Wyniki",
-                "address":"#"
+                name:"Wyniki",
+                internalLink:true,
+                address:"#"
               }
             ]
           },
           {
-            "name":"EDYCJA XVII",
-            "address":"#",
-            "submenu":[
+            name:"EDYCJA XVII",
+            internalLink:true,
+            address:"#",
+            submenu:[
               {
-                "name":"Statystyki",
-                "address":"#"
+                name:"Statystyki",
+                address:"#"
               },
               {
-                "name":"Wyniki",
-                "address":"#"
+                name:"Wyniki",
+                address:"#"
               }
             ]
           },
           {
-            "name":"EDYCJA XVI",
-            "address":"#",
-            "submenu":[
+            name:"EDYCJA XVI",
+            internalLink:true,
+            address:"#",
+            submenu:[
               {
-                "name":"Statystyki",
-                "address":"#"
+                name:"Statystyki",
+                internalLink:true,
+                address:"#"
               },
               {
-                "name":"Wyniki",
-                "address":"#"
+                name:"Wyniki",
+                internalLink:true,
+                address:"#"
               }
             ]
           }
         ]
       },
       {
-        "name":"Zgłoś się",
-        "address":"#",
-        "submenu":[
+        name:"Zgłoś się",
+        nternalLink:true,
+        address:"#",
+        submenu:[
           {
-            "name":"Formularz",
-            "address":"/formularz"
+            name:"Formularz",
+            internalLink:true,
+            address:"/formularz",
+            submenu:[]
           }
         ]
       },
       {
-        "name":"Komitety",
-        "address":"#",
-        "submenu":[
+        name:"Komitety",
+        address:"#",
+        submenu:[
           {
-            "name":"Komitet Krajowy",
-            "address":"#"
+            name:"Komitet Krajowy",
+            internalLink:false,
+            address:'https://www.w3schools.com/angular/angular_http.asp',
+            
+            submenu:[]
           },
           {
-            "name":"Komitety Regionalne",
-            "address":"#"
+            name:"Komitety Regionalne",
+            internalLink:true,
+            address:"#",
+            submenu:[]
           }
         ]
       }
