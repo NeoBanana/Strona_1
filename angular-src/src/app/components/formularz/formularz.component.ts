@@ -1,18 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-formularz',
-  host:{
-    class:'md-g md-g--r1'
+  host: {
+    class: 'md-g md-g--r1'
   },
   templateUrl: './formularz.component.html',
   styleUrls: ['./formularz.component.scss']
 })
 export class FormularzComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
