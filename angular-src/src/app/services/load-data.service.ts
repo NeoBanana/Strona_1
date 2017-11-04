@@ -77,7 +77,7 @@ export class LoadDataService {
           },
           {
             name:"Poprzednie Edycje",
-            address:"http://www.google.pl",
+            address:"http://www.mbg.uz.zgora.pl/",
             submenu:[]
           }
         ]
