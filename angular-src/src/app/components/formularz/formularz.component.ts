@@ -5,9 +5,6 @@ import {
 
 @Component({
   selector: 'app-formularz',
-  host: {
-    class: 'md-g md-g--r1'
-  },
   templateUrl: './formularz.component.html',
   styleUrls: ['./formularz.component.scss']
 })

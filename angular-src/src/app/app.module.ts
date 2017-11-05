@@ -18,12 +18,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormularzComponent} from './components/formularz/formularz.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { InvalidRouteComponent } from './components/invalid-route/invalid-route.component';
 
  
 
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
   {path:'formularz',component: FormularzComponent},
+  { path: '**', component:  InvalidRouteComponent }
+  
 ]
 
 @NgModule({
@@ -35,7 +38,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FormularzComponent,
     SidemenuComponent,
-    CalendarComponent
+    CalendarComponent,
+    InvalidRouteComponent
   ],
   imports: [
     BrowserModule,
