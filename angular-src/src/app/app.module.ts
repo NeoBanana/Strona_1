@@ -19,6 +19,7 @@ import { FormularzComponent} from './components/formularz/formularz.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { InvalidRouteComponent } from './components/invalid-route/invalid-route.component';
+import { SponsorsComponent } from './components/sponsors/sponsors.component';
 
  
 
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     FormularzComponent,
     SidemenuComponent,
     CalendarComponent,
-    InvalidRouteComponent
+    InvalidRouteComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,

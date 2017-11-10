@@ -2,23 +2,22 @@
   <app-navbar></app-navbar>
 </nav>
 <div class="wrapper">
+
   <header>
     <app-header></app-header>
   </header>
-  <main class="md-g md-g--mobile--childs">
-    <div class="md-g  md-g--c2 ">
-      <app-sidemenu></app-sidemenu>
-    </div>
-    <div class="md-g  md-g--cs3 md-g--ce9 ">
-      <router-outlet class="md-g--r2">
-      </router-outlet>
+  <div class="side--left">
+    <app-sidemenu></app-sidemenu>
+  </div>
 
-
-    </div>
-    <div class="md-g  md-g--cs10 ">
-      <app-calendar></app-calendar>
-    </div>
+  <main>
+    <router-outlet>
+    </router-outlet>
   </main>
+  <aside class="side--right">
+    <app-calendar></app-calendar>
+    <app-sponsors></app-sponsors>
+  </aside>
 </div>
 <footer>
   <app-footer></app-footer>
