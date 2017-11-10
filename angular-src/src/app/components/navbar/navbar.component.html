@@ -1,37 +1,55 @@
 <ul class="menu">
-  <li *ngFor="let item of menu" [ngClass]="{'menu-item-has-children':item.submenu.length>0}">
-<!-- if item has submenu items add class-->
-    <a *ngIf="item.address.indexOf('/')==0 || item.address.indexOf('#')==0 " routerLink={{item.address}}>{{item.name }}</a>
-    <!-- ROUTER redirect-->
-    <a *ngIf="item.address.indexOf('http')==0 " href="{{item.address}}">{{item.name }}</a>
-    <!-- external url redirect-->
-
-    <ul class="sub-menu" *ngIf="item.submenu.length>0">
-      <!-- if item has submenu items show them-->
-      <li *ngFor="let item1 of item.submenu" [ngClass]="{'menu-item-has-children':item1.submenu.length>0}">
-        <!-- if item has submenu items add class-->
-
-        <a *ngIf="item1.address.indexOf('/')==0 || item1.address.indexOf('#')==0" routerLink={{item1.address}}>{{item1.name }}</a>
-        <!-- ROUTER redirect-->
-        <a *ngIf="item1.address.indexOf('http')==0 " href="{{item1.address}}">{{item1.name }}</a>
-        <!-- external url redirect-->
-
-        <ul class="sub-menu" *ngIf="item1.submenu.length>0">
-          <!-- if item has submenu items show them-->
-          <li *ngFor="let item2 of item1.submenu">
-
-            <a *ngIf="item2.address.indexOf('/')==0 || item2.address.indexOf('#')==0 " routerLink={{item2.address}}>{{item2.name }}</a>
-            <!-- ROUTER redirect-->
-            <a *ngIf="item2.address.indexOf('http')==0 " href="{{item2.address}}">{{item2.name}}</a>
-            <!-- external url redirect-->
-
+    <li >
+        <a routerLink="/">Strona główna</a>
+    </li>
+    <li class="menu-item-has-children">
+        <a href="#">edycje</a>
+        <ul class="sub-menu">
+          <li>
+            <a href="">Poprzednie edycje</a>
           </li>
+        <li *ngFor="let edition of editions" class="menu-item-has-children">
+            <a routerLink="/edycja/{{edition.id}}">{{edition.nazwa}}</a>
+            <ul class="sub-menu">
+                <li>
+                    <a routerLink="/edycja/{{edition.id}}/statystyki">statystyki</a>
+                </li>
+                <li>
+                    <a routerLink="/edycja/{{edition.id}}/wyniki">wyniki</a>
+                </li>
+            </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="menu-item-has-children">
+        <a href="#">Informacje</a>
+        <ul class="sub-menu">
+          <li> <a routerLink="/info/regulamin/junior">Regulamin konkursu MBG Junior</a></li>
+          <li> <a routerLink="/info/regulamin/senior">Regulamin konkursu MBG Senior</a></li>
+          <li> <a routerLink="/info/geneza">Geneza Konkursu</a></li>
+          <li> <a routerLink="/info/warunki_udzialo">Warunki udziału w konkursie</a></li>
+          <li> <a routerLink="/info/specyfikacja_zadan">Specyfikacja zadań konkursowych</a></li>
+          <li> <a routerLink="/info/idee">Idee konkursu</a></li>
+          <li> <a routerLink="/info/zasady">Zasady ogólne</a></li>
+          <li> <a routerLink="/info/nagrody">Nagrody</a></li>
+          
         </ul>
-      </li>
-    </ul>
-  </li>
+    </li>
+    <li class="menu-item-has-children">
+        <a href="#">zglos sie!</a>
+        <ul class="sub-menu">
+          <li> <a routerLink="/formularz">formularz</a></li>
+        </ul>
+    </li>
+    <li class="menu-item-has-children">
+        <a href="#">Kontakt</a>
+        <ul class="sub-menu">
+          <li><a routerLink="/">Komitet Krajowy</a></li>
+          <li><a routerLink="/">Komitety Regionalne</a></li>
+        </ul>
+    </li>
   <li class="login">
-    <a href="/login">Zaloguj się</a>
+    <a routerLink="/login">Zaloguj się</a>
   </li>
 
 </ul>

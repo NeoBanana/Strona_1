@@ -7,112 +7,26 @@ export class LoadDataService {
 
   constructor(private http:Http) { }
 
-  LoadMainMenu(){
-    let menu=
-    [
+  LoadEditions(){
+    let editions=[
       {
-        name:"Strona Główna",
-        address:"/",
-        submenu:[]
+        id:1,
+        nazwa:"EDYCJA XIX"
       },
       {
-        name:"Edycje",
-        address:"#",
-        submenu:[
-          {
-            name:"EDYCJA XIX",
-            address:"#",
-            submenu:[
-              {
-                name:"Statystyki",
-                address:"#"
-              },
-              {
-                name:"Wyniki",
-                address:"#"
-              }
-            ]
-          },
-          {
-            name:"EDYCJA XVIII",
-            address:"#",
-            submenu:[
-              {
-                name:"Statystyki",
-                address:"#"
-              },
-              {
-                name:"Wyniki",
-                address:"#"
-              }
-            ]
-          },
-          {
-            name:"EDYCJA XVII",
-            address:"#",
-            submenu:[
-              {
-                name:"Statystyki",
-                address:"#"
-              },
-              {
-                name:"Wyniki",
-                address:"#"
-              }
-            ]
-          },
-          {
-            name:"EDYCJA XVI",
-            address:"#",
-            submenu:[
-              {
-                name:"Statystyki",
-                address:"#"
-              },
-              {
-                name:"Wyniki",
-                address:"#"
-              }
-            ]
-          },
-          {
-            name:"Poprzednie Edycje",
-            address:"http://www.mbg.uz.zgora.pl/",
-            submenu:[]
-          }
-        ]
+        id:2,
+        nazwa:"EDYCJA XX"
       },
       {
-        name:"Zgłoś się",
-        address:"#",
-        submenu:[
-          {
-            name:"Formularz",
-            address:"/formularz",
-            submenu:[]
-          }
-        ]
+        id:3,
+        nazwa:"EDYCJA XXI"
       },
       {
-        name:"Komitety",
-        address:"#",
-        submenu:[
-          {
-            name:"Komitet Krajowy",
-            address:'https://www.w3schools.com/angular/angular_http.asp',
-            
-            submenu:[]
-          },
-          {
-            name:"Komitety Regionalne",
-            address:"#",
-            submenu:[]
-          }
-        ]
+        id:4,
+        nazwa:"EDYCJA XXII"
       }
     ];
-
-    return menu;
+    return editions;
   }
 
 
