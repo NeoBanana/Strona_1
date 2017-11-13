@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes} from '@angular/router';
+import { MaterialModule } from './modules/material.module';
 
 // Services
 import {ValidateService} from './services/validate.service';
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MaterialModule
   ],
   providers: [ValidateService,LoadDataService],
   bootstrap: [AppComponent]
