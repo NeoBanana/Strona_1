@@ -24,13 +24,13 @@ mat-card {
     margin-bottom: 20px;
 }
 
-mat-card>mat-toolbar {
+mat-card > mat-toolbar {
     //fix for toolbar in mat-card
     margin: -24px 0 24px -24px!important;
     width: calc(100% + 48px)!important;
 }
 
-mat-card>mat-card-header>mat-toolbar {
+mat-card > mat-card-header >mat-toolbar {
     //fix for toolbar in mat-card
     margin: -24px 0 24px -24px!important;
     width: calc(100% + 48px)!important;
@@ -39,6 +39,7 @@ mat-card>mat-card-header>mat-toolbar {
 mat-card {
     overflow-x: auto;
 }
+
 
 html {
     height: 100%;

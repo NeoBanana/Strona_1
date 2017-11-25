@@ -4,8 +4,8 @@
         Konkursowi patronuje i wspiera
     </mat-toolbar>
     <mat-card-content>
-        <div class="flexbox">
-            <div  class="flexbox__item"*ngFor="let sponsor of sponsors">
+        <div class="patrons">
+            <div  class="patrons__item mat-elevation-z1" *ngFor="let sponsor of sponsors">
                     <a  mat-button href="{{sponsor.href}}" ><img src="{{sponsor.src}}" alt="{{sponsor.name}}" ></a>
             </div>
         </div>
