@@ -4,9 +4,13 @@
         Konkursowi patronuje i wspiera
     </mat-toolbar>
     <mat-card-content>
-        <a *ngFor="let sponsor of sponsors" mat-button href="{{sponsor.href}}" class="fullWidth"><img src="{{sponsor.src}}" alt="{{sponsor.name}}" ></a>
-        <!-- <a mat-button href="http://www.ptm.org.pl/"><img src="http://www.mbg.uz.zgora.pl/ptm-logo-150.png" alt="Polskie Towarzystwo Matematyczne" class="fullWidth"></a>
-        <a mat-button href="#"><img src="http://www.mbg.uz.zgora.pl/logo.php" alt="Matematyka Bez Granic"></a> -->
+        <div class="flexbox">
+            <div  class="flexbox__item"*ngFor="let sponsor of sponsors">
+                    <a  mat-button href="{{sponsor.href}}" ><img src="{{sponsor.src}}" alt="{{sponsor.name}}" ></a>
+            </div>
+        </div>
+       
+
     </mat-card-content>
     
 </mat-card>
