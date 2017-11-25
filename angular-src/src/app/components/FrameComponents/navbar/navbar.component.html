@@ -1,0 +1,39 @@
+<ul class="menu">
+    <li >
+        <a routerLink="/"><mat-icon>home</mat-icon></a>
+    </li>
+    <li class="menu-item-has-children">
+        <a >edycje</a>
+        <ul class="sub-menu">
+          <li>
+            <a href="http://www.mbg.uz.zgora.pl/">Poprzednie edycje</a>
+          </li>
+        <li *ngFor="let edition of editions" >
+            <a routerLink="/edycja/{{edition.id}}">{{edition.nazwa}}</a>
+        </li>
+      </ul>
+    </li>
+    <li class="menu-item-has-children">
+        <a >Informacje</a>
+        <ul class="sub-menu"> 
+            <li> <a routerLink="/info/ogolne">O konkursie</a></li>
+            <!-- <li> <a routerLink="/info/geneza">Geneza Konkursu</a></li>
+            <li> <a routerLink="/info/idee">Idee konkursu</a></li>
+            <li> <a routerLink="/info/nagrody">Nagrody</a></li> 
+            <li> <a routerLink="/info/specyfikacja_zadan">Specyfikacja zadań konkursowych</a></li>-->
+            <li> <a routerLink="/info/regulaminy">Regulaminy i Zasady</a></li>         
+<!--        <li> <a routerLink="/info/regulamin/junior">Regulamin konkursu MBG Junior</a></li>
+            <li> <a routerLink="/info/regulamin/senior">Regulamin konkursu MBG Senior</a></li>
+            <li> <a routerLink="/info/warunki_udzialo">Warunki udziału w konkursie</a></li>
+            <li> <a routerLink="/info/zasady">Zasady ogólne</a></li> -->      
+        </ul>
+    </li>
+    <li>
+        <a routerLink="/contact">Dane Komitetow</a>
+
+    </li>
+  <li class="login">
+    <a routerLink="/login">Zaloguj się</a>
+  </li>
+
+</ul>

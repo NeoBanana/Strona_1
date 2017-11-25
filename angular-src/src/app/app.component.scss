@@ -1,5 +1,6 @@
 @import '../assets/variables';
  :host {
+   width:100%;
   min-height: 100%;
   display: grid;
   grid-template-rows: minmax(60px, max-content) minmax(300px, max-content) 1fr max-content;
@@ -8,7 +9,7 @@
     grid-row: 2;
     display: grid;
     grid-template-rows: minmax(200px, max-content) minmax(300px, max-content);
-    grid-template-columns: 1fr 1fr 5fr 2fr 1fr;
+    grid-template-columns: 1fr 5fr 2fr 1fr;
     grid-gap: 10px;
     header {
       grid-row: 1;
@@ -16,35 +17,30 @@
       background-size: 100% 100%;
      
     }
-    .side--left{
+    main {
+    
       grid-row: 2;
       grid-column: 2;
-    }
-    main {
-      grid-row: 2;
-      grid-column: 3;
+      overflow-x:scroll;
     }
     .side--right{
       grid-row: 2;
-      grid-column: 4;
+      grid-column: 3;
 
     }
  
   }
   @media screen and (max-width: $mobileBreakpoint) {
     .wrapper {
-      grid-template-rows: minmax(200px, max-content) repeat(3,max-content) minmax(100px, max-content);
-        .side--left {
-          grid-row: 2;
-      grid-column: 1/-1;
-      }
+      grid-template-rows: minmax(200px, max-content) repeat(2,max-content) minmax(100px, max-content);
+
     main
     {
-      grid-row: 3;
+      grid-row: 2;
       grid-column: 1/-1;
     }   
     .side--right{
-      grid-row: 4;
+      grid-row: 3;
       grid-column: 1/-1;
     }   
   }
