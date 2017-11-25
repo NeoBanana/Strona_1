@@ -28,6 +28,48 @@ export class LoadDataService {
     ];
     return editions;
   }
+
+  LoadParticipants(){
+    let participants=[
+      {
+        region:"lubuskie",
+        city:"lubsko",
+        school_type:"liceum",
+        school_name:"ZSOiE",
+        classes:[
+          {
+            class:"4i",
+            language:"Angielski",
+            guardian:"Putin"
+          },
+          {
+            class:"3i",
+            language:"Angielski",
+            guardian:"Putin"
+          }
+        ]
+      },
+      {
+        region:"lubuskie",
+        city:"lubsko",
+        school_type:"liceum",
+        school_name:"burdel",
+        classes:[
+          {
+            class:"4i",
+            language:"Angielski",
+            guardian:"Putin"
+          },
+          {
+            class:"3i",
+            language:"Angielski",
+            guardian:"Putin"
+          }
+        ]
+      }
+    ]
+    return participants;
+  }
   LoadSponsors(){
     let sponsors=[
       {
