@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
-  selector: 'app-calendar',
+  selector: 'widget-calendar',
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.scss']
 })

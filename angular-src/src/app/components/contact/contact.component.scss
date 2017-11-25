@@ -1,0 +1,11 @@
+.flexbox{
+    display: flex;
+    flex-flow:row wrap;
+}
+.flexbox__item{
+
+    flex:1 0 30%;
+}
+mat-card{
+    overflow-x: auto;
+}

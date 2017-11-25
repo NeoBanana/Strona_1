@@ -11,22 +11,38 @@ import {ValidateService} from './services/validate.service';
 import {LoadDataService} from './services/load-data.service';
 
 // Components
+//  Frame Components
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/FrameComponents/navbar/navbar.component';
+import { FooterComponent } from './components/FrameComponents/footer/footer.component';
+import { HeaderComponent } from './components/FrameComponents/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FormularzComponent} from './components/formularz/formularz.component';
-import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
-import { CalendarComponent } from './components/calendar/calendar.component';
-import { InvalidRouteComponent } from './components/invalid-route/invalid-route.component';
-import { SponsorsComponent } from './components/sponsors/sponsors.component';
-
+ // Contact
+import { ContactComponent } from './components/contact/contact.component';
+//  invalid Route Component
+import { InvalidRouteComponent } from './components/FrameComponents/invalid-route/invalid-route.component';
  
+//  Home components
+import { FormularzComponent} from './components/formularz/formularz.component';
+
+//  Widgets
+import { WidgetsComponent } from './components/widgets/widgets.component';
+import { SponsorsComponent } from './components/widgets/sponsors/sponsors.component';
+import { CalendarComponent } from './components/widgets/calendar/calendar.component';
+
+// Info
+import { GeneralComponent } from './components/info/general/general.component';
+import { RulesComponent } from "./components/info/rules/rules.component";
+
+// Pipes
+import { SearchPipe } from './pipes/search.pipe';
 
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
   {path:'formularz',component: FormularzComponent},
+  {path:'contact',component: ContactComponent},
+  {path:'info/ogolne',component: GeneralComponent},
+  {path:'info/regulaminy',component: RulesComponent},
   { path: '**', component:  InvalidRouteComponent }
   
 ]
@@ -38,11 +54,15 @@ const appRoutes: Routes = [
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
+    ContactComponent,
     FormularzComponent,
-    SidemenuComponent,
-    CalendarComponent,
     InvalidRouteComponent,
-    SponsorsComponent
+    WidgetsComponent,
+    SponsorsComponent,
+    CalendarComponent,
+    GeneralComponent,
+    RulesComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
