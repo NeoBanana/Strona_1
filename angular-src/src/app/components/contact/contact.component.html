@@ -5,14 +5,14 @@
           </mat-toolbar>
             <mat-card-content>
                     <mat-form-field  class="fullWidth">
-                        <mat-placeholder ><b><mat-icon>search</mat-icon></b> Wyszukaj</mat-placeholder>
+                        <mat-placeholder ><b><mat-icon >search</mat-icon></b> Wyszukaj</mat-placeholder>
                       <input matInput  [(ngModel)]="query"> 
                     
                     </mat-form-field>
 
 
-               <div class="flexbox">
-                    <div class="flexbox__item" *ngFor="let committee of committees | search:'region':query ">
+               <div class="contacts">
+                    <div class="contacts__item" *ngFor="let committee of committees | search:'region':query ">
 
                         <mat-card >
                           <mat-card-title>

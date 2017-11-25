@@ -4,9 +4,6 @@ mat-toolbar{
     margin-right:10px;
 
     }
-    button:not(.login){
-        background:#1E88E5;
-    }
 
 }
 @media screen and (max-width:800px){
@@ -23,7 +20,4 @@ mat-toolbar{
             margin-bottom:5px;
         }
     }
-}
-.login{
-    background:#009688;
 }

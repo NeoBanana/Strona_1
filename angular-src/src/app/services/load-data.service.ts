@@ -42,7 +42,7 @@ export class LoadDataService {
       },{
         name:"Polskie Towarzystwo Matematyczne",
         href:"http://www.ptm.org.pl/",
-        src:"http://www.mbg.uz.zgora.pl/ptm-logo-150.png"
+        src:"https://hdwallsource.com/img/2014/7/large-40566-41516-hd-wallpapers.jpg"
       },
       {
         name:"Polskie Towarzystwo Matematyczne",

@@ -42,10 +42,11 @@
        }
        main{
          flex:1 0 65%;
-         margin: 0 20px;
+        
        }
        aside {
-        flex:1 0 25%;
+         margin-left: 10px; 
+        flex:1 0 calc(25% - 10px);
         }
      }
      
