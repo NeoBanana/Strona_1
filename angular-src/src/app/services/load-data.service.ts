@@ -39,6 +39,20 @@ export class LoadDataService {
         name:"Matematyka Bez Granic",
         href:"http://www.mbg.uz.zgora.pl",
         src:"http://www.mbg.uz.zgora.pl/logo.php"
+      },{
+        name:"Polskie Towarzystwo Matematyczne",
+        href:"http://www.ptm.org.pl/",
+        src:"http://www.mbg.uz.zgora.pl/ptm-logo-150.png"
+      },
+      {
+        name:"Polskie Towarzystwo Matematyczne",
+        href:"http://www.ptm.org.pl/",
+        src:"http://www.mbg.uz.zgora.pl/ptm-logo-150.png"
+      },
+      {
+        name:"Polskie Towarzystwo Matematyczne",
+        href:"http://www.ptm.org.pl/",
+        src:"http://www.mbg.uz.zgora.pl/ptm-logo-150.png"
       }
     ]
     return sponsors;

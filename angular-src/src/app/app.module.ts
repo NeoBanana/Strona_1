@@ -14,6 +14,7 @@ import {LoadDataService} from './services/load-data.service';
 //  Frame Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/FrameComponents/navbar/navbar.component';
+import { Navbar2Component } from './components/FrameComponents/navbar2/navbar2.component';
 import { FooterComponent } from './components/FrameComponents/footer/footer.component';
 import { HeaderComponent } from './components/FrameComponents/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     NavbarComponent,
+    Navbar2Component,
     FooterComponent,
     HeaderComponent,
     ContactComponent,

@@ -1,0 +1,16 @@
+<mat-toolbar class="fullWidth" color="primary">
+    <button mat-button routerLink="/" ><mat-icon>home</mat-icon></button>
+    <button mat-button [matMenuTriggerFor]="edycje">Edycje</button>
+    <mat-menu #edycje="matMenu">
+      <button mat-menu-item href="">poprzednie edycje</button>
+      <button mat-menu-item *ngFor="let edition of editions"  routerLink="/edycja/{{edition.id}}">{{edition.nazwa}}</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="info">Informacje</button>
+    <mat-menu #info="matMenu">
+      <button mat-menu-item routerLink="/info/ogolne">O konkursie</button>
+      <button mat-menu-item routerLink="/info/regulaminy">Regulaminy i Zasady</button>
+    </mat-menu>
+    <button mat-button routerLink="/contact">Dane Komitetow</button>
+    <div class="flexSpacer"></div>
+    <button mat-button routerLink="/login" class="login">zaloguj</button>
+</mat-toolbar>
