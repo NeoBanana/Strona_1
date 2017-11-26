@@ -20,6 +20,12 @@ import { HeaderComponent } from './components/FrameComponents/header/header.comp
 import { HomeComponent } from './components/home/home.component';
  // Contact
 import { ContactComponent } from './components/contact/contact.component';
+// Editions
+import {EditionsComponent} from './components/editions/editions.component';
+import {ResultsComponent} from './components/editions/results/results.component';
+import {StatisticsComponent} from './components/editions/statistics/statistics.component';
+import {ParticipantsComponent} from './components/editions/participants/participants.component';
+
 //  invalid Route Component
 import { InvalidRouteComponent } from './components/FrameComponents/invalid-route/invalid-route.component';
  
@@ -42,9 +48,11 @@ const appRoutes: Routes = [
   {path:'',component: HomeComponent},
   {path:'formularz',component: FormularzComponent},
   {path:'contact',component: ContactComponent},
+  {path: 'edycja/:id', component: EditionsComponent },
   {path:'info/ogolne',component: GeneralComponent},
   {path:'info/regulaminy',component: RulesComponent},
   { path: '**', component:  InvalidRouteComponent }
+  
   
 ]
 
@@ -57,6 +65,10 @@ const appRoutes: Routes = [
     FooterComponent,
     HeaderComponent,
     ContactComponent,
+    EditionsComponent,
+    ResultsComponent,
+    StatisticsComponent,
+    ParticipantsComponent,
     FormularzComponent,
     InvalidRouteComponent,
     WidgetsComponent,

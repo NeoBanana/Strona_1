@@ -11,7 +11,8 @@ import {
     MatSidenavModule,
     MatExpansionModule,
     MatListModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
 } from '@angular/material';
 
 @NgModule({
@@ -27,7 +28,8 @@ import {
         MatSidenavModule,
         MatExpansionModule,
         MatListModule,
-        MatInputModule
+        MatInputModule,
+        MatTableModule
     ],
     exports: [
         BrowserAnimationsModule,
@@ -41,7 +43,8 @@ import {
         MatSidenavModule,
         MatExpansionModule,
         MatListModule,
-        MatInputModule
+        MatInputModule,
+        MatTableModule
     ]
 })
 export class MaterialModule { }
