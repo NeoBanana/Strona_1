@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LoadDataService} from '../../../services/load-data.service';
+import {LoadDataService} from '../../../services/connect/load-data.service';
 
 @Component({
   selector: 'app-navbar', 
@@ -11,7 +11,8 @@ export class NavbarComponent implements OnInit {
   constructor(private LoadDataService: LoadDataService) { }
 
   ngOnInit() {
-    this.editions=  this.LoadDataService.LoadEditions();
+    this.LoadDataService.getEditions()
+    .subscribe(data => this.editions = data);
   }
 
 }

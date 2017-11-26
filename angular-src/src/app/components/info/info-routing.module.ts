@@ -8,8 +8,8 @@ import { RulesComponent } from './rules/rules.component'
 
 const infoRoutes: Routes = [
   
-  {path:'info/ogolne',component:GeneralComponent},
-  {path:'info/regulaminy',component:RulesComponent},
+  {path:'info/ogolne',component:GeneralComponent ,data:{title:"O Konkursie"}},
+  {path:'info/regulaminy',component:RulesComponent,data:{title:"Regulaminy i Zasady"}},
   {path:'info', redirectTo: '/info/ogolne'}
 ]
 @NgModule({

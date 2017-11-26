@@ -7,14 +7,11 @@ import { ContactComponent } from './components/contact/contact.component';
 import { InvalidRouteComponent } from './components/FrameComponents/invalid-route/invalid-route.component';
 
 const appRoutes: Routes = [
-  {path:'',component: HomeComponent},
-  {path:'formularz',component: FormularzComponent},
-  {path:'contact',component: ContactComponent},
-  //{path: 'edycja/:id', component: EditionsComponent },
- // {path:'info/ogolne',component: GeneralComponent},
- // {path:'info/regulaminy',component: RulesComponent},
-  { path: '**', component:  InvalidRouteComponent }
-  
+  {path:'',component: HomeComponent, data:{title:"Strona główna"}},
+  {path:'formularz',component: FormularzComponent, data:{title:"Formularz"}},
+  {path:'contact',component: ContactComponent, data:{title:"Kontakt"}},
+  { path: '**', component:  InvalidRouteComponent, data:{title:"Strona nie znaleziona",accent:"warn"}}
+
 ]
 @NgModule({
   imports: [

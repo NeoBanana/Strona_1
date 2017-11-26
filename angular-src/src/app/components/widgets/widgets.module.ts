@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CalendarComponent } from './calendar/calendar.component';
-import { SponsorsComponent } from './sponsors/sponsors.component';
 import { MainModuleModule } from '../../modules/main-module.module';
 
-@NgModule({
+import { CalendarComponent } from './calendar/calendar.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
+
+@NgModule({ 
   imports: [
     CommonModule,
     MainModuleModule

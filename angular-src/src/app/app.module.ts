@@ -3,12 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes} from '@angular/router';
 import { MainModuleModule } from './modules/main-module.module';
 
+// FalseDatabase
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+
 // Services
-import {ValidateService} from './services/validate.service';
-import {LoadDataService} from './services/load-data.service';
 
 // Components
 //  Frame Components
@@ -34,6 +37,8 @@ import { InfoModule } from './components/info/info.module';
 import { SearchPipe } from './pipes/search.pipe';
 import { AppRoutingModule } from './/app-routing.module';
 import { EditionsRoutingModule } from './components/editions/editions-routing.module';
+import { LoadDataService } from './services/connect/load-data.service';
+import { SnackbarService } from './services/messages/snackbar.service';
 
 @NgModule({
   declarations: [
@@ -52,11 +57,14 @@ import { EditionsRoutingModule } from './components/editions/editions-routing.mo
     WidgetsModule,
     InfoModule,
     HttpModule,
+    HttpClientModule,
     MainModuleModule,
     AppRoutingModule,
-    EditionsRoutingModule
+    EditionsRoutingModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false })
   ],
-  providers: [ValidateService,LoadDataService],
+  providers: [LoadDataService, SnackbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

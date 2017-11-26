@@ -26,6 +26,7 @@ import {ParticipantsComponent} from './participants/participants.component';
     ResultsComponent,
     StatisticsComponent,
     ParticipantsComponent,
-  ]
+  ],
+  providers: []
 })
 export class EditionsModule { }
