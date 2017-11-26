@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LoadDataService} from '../../services/load-data.service';
+import {LoadDataService} from '../../services/connect/load-data.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +12,8 @@ export class ContactComponent implements OnInit {
   constructor(private LoadDataService: LoadDataService) { }
 
   ngOnInit() {
-    this.committees=  this.LoadDataService.LoadCommittees();
+    this.LoadDataService.getCommittees()
+    .subscribe(data => this.committees = data);
   }
 
 }

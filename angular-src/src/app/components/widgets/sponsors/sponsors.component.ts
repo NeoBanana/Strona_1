@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LoadDataService} from '../../../services/load-data.service';
+import {LoadDataService} from '../../../services/connect/load-data.service';
 
 
 @Component({
@@ -12,7 +12,8 @@ export class SponsorsComponent implements OnInit {
   constructor(private LoadDataService: LoadDataService) { }
 
   ngOnInit() {
-    this.sponsors=  this.LoadDataService.LoadSponsors();
+    this.LoadDataService.getSponsors()
+    .subscribe(data => this.sponsors = data);
   }
 
 }

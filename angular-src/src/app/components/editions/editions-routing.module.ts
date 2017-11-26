@@ -6,7 +6,7 @@ import {EditionsComponent} from './editions.component';
 
 
 const editionRoutes: Routes = [
-  {path:'edycja/:id',component:EditionsComponent}
+  {path:'edycja/:id',component:EditionsComponent, data:{title:"edycja", accent:"primary"} }
 
 ]
 @NgModule({

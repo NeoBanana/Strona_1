@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SnackbarService } from '../../services/messages/snackbar.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private messages:SnackbarService) { }
 
+  pop(){
+    this.messages.popup("test");
+  }
   ngOnInit() {
   }
 
