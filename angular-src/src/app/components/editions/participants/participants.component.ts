@@ -26,8 +26,7 @@ dataSource:MatTableDataSource<Participant>;
    
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
-
-   this.dataSource.filter = filterValue;
+    this.dataSource.filter = filterValue;
   }
   ngOnInit() {
    

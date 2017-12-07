@@ -60,7 +60,7 @@ export class InMemoryDataService implements InMemoryDbService {
         region: "lubuskie",
         city: "lubsko",
         school_type: "liceum",
-        school_name: "burdel",
+        school_name: "technik",
         classes: [
           {
             class: "4i",
