@@ -19,62 +19,61 @@ import 'rxjs/add/operator/delay';
 @Injectable()
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
+    const participants = [
+      {
+        id:1,
+        region: "lubuskie",
+        city: "lubsko",
+        school_id:1,
+        school_type: "liceum",
+        school_name: "ZSOiE"
+      },
+      {
+        id:2,
+        region: "lubuskie",
+        city: "lubsko",
+        school_id:2,
+        school_type: "liceum",
+        school_name: "liceum ogolnoksztalczace",
+
+      }
+    ];
+    // classes: [
+    //   {
+    //     class: "4i",
+    //     language: "Angielski",
+    //     guardian: "Putin"
+    //   },
+    //   {
+    //     class: "3i",
+    //     language: "Angielski",
+    //     guardian: "Putin"
+    //   }
+    // ]
     const editions = [
       {
         id: 1,
-        nazwa: "EDYCJA XIX"
+        nazwa: "EDYCJA XIX",
+        participants:[participants[0]]
+
       },
       {
         id: 2,
-        nazwa: "EDYCJA XX"
+        nazwa: "EDYCJA XX",
+        participants:[participants[1]]
       },
       {
         id: 3,
-        nazwa: "EDYCJA XXI"
+        nazwa: "EDYCJA XXI",
+        participants:participants
       },
       {
         id: 4,
-        nazwa: "EDYCJA XXII"
+        nazwa: "EDYCJA XXII",
+        participants:participants
       }
     ];
-    const participants = [
-      {
-        region: "lubuskie",
-        city: "lubsko",
-        school_type: "liceum",
-        school_name: "ZSOiE",
-        classes: [
-          {
-            class: "4i",
-            language: "Angielski",
-            guardian: "Putin"
-          },
-          {
-            class: "3i",
-            language: "Angielski",
-            guardian: "Putin"
-          }
-        ]
-      },
-      {
-        region: "lubuskie",
-        city: "lubsko",
-        school_type: "liceum",
-        school_name: "technik",
-        classes: [
-          {
-            class: "4i",
-            language: "Angielski",
-            guardian: "Putin"
-          },
-          {
-            class: "3i",
-            language: "Angielski",
-            guardian: "Putin"
-          }
-        ]
-      }
-    ];
+   
     const sponsors = [
       {
         name: "Polskie Towarzystwo Matematyczne",
@@ -196,7 +195,7 @@ export class InMemoryDataService implements InMemoryDbService {
       }
     ]
 
-    const db = { editions, participants, sponsors,committees };
+    const db = { editions,  sponsors,committees };
 
     return db;
   }

@@ -1,0 +1,18 @@
+<mat-toolbar class="fullWidth" color="primary" class="mat-elevation-z10" >
+    <button mat-raised-button color="primary" routerLink="/"  ><mat-icon>home</mat-icon></button> 
+    <button mat-raised-button color="primary" [matMenuTriggerFor]="edycje" routerLinkActive="mat-accent" [routerLinkActiveOptions]="{exact: true}">Edycje
+    <mat-menu #edycje="matMenu">
+      <a mat-menu-item href="http://www.mbg.uz.zgora.pl/">poprzednie edycje</a>
+      <button mat-menu-item *ngFor="let edition of editions"  routerLink= "/edycja/{{edition.id}}" routerLinkActive="menu__link--active" >{{edition.nazwa}}</button> 
+    </mat-menu>
+  </button>
+    <button mat-raised-button color="primary" [matMenuTriggerFor]="info" routerLinkActive="mat-accent" [routerLinkActiveOptions]="{exact: true}">Informacje
+      <mat-menu #info="matMenu">
+        <button mat-menu-item routerLink="/info/ogolne"  routerLinkActive="menu__link--active">O konkursie</button>
+        <button mat-menu-item routerLink="/info/regulaminy"  routerLinkActive="menu__link--active">Regulaminy i Zasady</button> 
+      </mat-menu>
+  </button>
+    <button mat-raised-button color="primary" routerLink="/contact" routerLinkActive="mat-accent">Dane Komitetow</button>
+    <div class="flexSpacer"></div>
+    <button mat-raised-button color="accent" routerLink="/login" class="login" routerLinkActive="mat-warn">zaloguj</button>
+</mat-toolbar>
