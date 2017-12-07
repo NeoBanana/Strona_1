@@ -1,7 +1,7 @@
 //Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes} from '@angular/router';
@@ -39,6 +39,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { EditionsRoutingModule } from './components/editions/editions-routing.module';
 import { LoadDataService } from './services/connect/load-data.service';
 import { SnackbarService } from './services/messages/snackbar.service';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -47,11 +48,13 @@ import { SnackbarService } from './services/messages/snackbar.service';
     ContactComponent,
     FormularzComponent,
     InvalidRouteComponent,
-    SearchPipe
+    SearchPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     FrameModule,
     EditionsModule,
     WidgetsModule,

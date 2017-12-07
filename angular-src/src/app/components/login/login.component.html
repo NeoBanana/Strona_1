@@ -1,0 +1,13 @@
+<form [formGroup]="FormGroup" class="flexCentered">
+  <mat-form-field class="halfWidth ">
+    <input matInput placeholder="Login" formControlName="login" required>
+  </mat-form-field>
+  <mat-form-field class="halfWidth ">
+    <input matInput type="password" placeholder="Hasło" formControlName="pass" required>
+  </mat-form-field>
+  <mat-card-actions class="halfWidth ">
+    <button mat-raised-button color="accent" mat-size2 class="fullWidth">
+      <mat-icon aria-hidden="true">done</mat-icon>Zaloguj się </button>
+
+  </mat-card-actions>
+</form>

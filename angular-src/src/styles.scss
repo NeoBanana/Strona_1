@@ -94,6 +94,14 @@ ol li {
 .fullWidth {
     width: 100%;
 }
+.halfWidth{
+    width:50%;
+}
+.flexCentered{
+    display:flex;
+    flex-flow:column;
+    align-items:center;
+}
 .flexSpacer {
     flex: auto;
 }
