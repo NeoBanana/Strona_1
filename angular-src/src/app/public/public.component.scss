@@ -1,0 +1,19 @@
+@import '../shared/style/variables';
+:host {
+    width:100%;
+    display: flex;
+    flex-flow: column;
+  }
+ 
+@media screen and (min-width:$mobileBreakpoint) {
+     :host {
+        flex-flow: row wrap;
+        main {
+            flex: 1 0 65%;
+        }
+        aside {
+            margin-left: 10px;
+            flex: 1 0 calc(25% - 10px);
+        }
+    }
+}

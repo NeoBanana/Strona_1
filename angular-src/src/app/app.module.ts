@@ -1,73 +1,55 @@
 //Modules
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes} from '@angular/router';
-import { MainModuleModule } from './modules/main-module.module';
+import { SharedModule } from './shared/shared.module'; 
 
 // FalseDatabase
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
-// Services
-
-// Components
-//  Frame Components
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { FrameModule } from './components/FrameComponents/frame.module';
- // Contact
-import { ContactComponent } from './components/contact/contact.component';
-// Editions
-import { EditionsModule } from './components/editions/editions.module';
-//  invalid Route Component
-import { InvalidRouteComponent } from './components/FrameComponents/invalid-route/invalid-route.component';
- 
-//  Home components
-import { FormularzComponent} from './components/formularz/formularz.component';
+import { FrameModule } from './frame/frame.module';
 
-//  Widgets
-import { WidgetsModule } from './components/widgets/widgets.module';
 
-// Info
-import { InfoModule } from './components/info/info.module';
-// Pipes
-import { SearchPipe } from './pipes/search.pipe';
-import { AppRoutingModule } from './/app-routing.module';
-import { EditionsRoutingModule } from './components/editions/editions-routing.module';
-import { LoadDataService } from './services/connect/load-data.service';
-import { SnackbarService } from './services/messages/snackbar.service';
-import { LoginComponent } from './components/login/login.component';
+import { PublicModule } from './public/public.module';
+import { AppRoutingModule } from './app-routing.module';
+import { LoadDataService } from 'app/shared/services/connect/load-data.service';
+import { SnackbarService } from 'app/shared/services/messages/snackbar.service';
+import { ErrorService } from 'app/shared/services/connect/error.service';
+import { EditionsService } from 'app/shared/services/connect/data/editions/editions.service';
+import { SchoolModule } from 'app/school/school.module';
+import { InvalidRouteComponent } from './invalid-route/invalid-route.component';
+import { MainProgressBarService } from './shared/services/progressbars/main-progress-bar.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ContactComponent,
-    FormularzComponent,
     InvalidRouteComponent,
-    SearchPipe,
-    LoginComponent
+
+
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
     FrameModule,
-    EditionsModule,
-    WidgetsModule,
-    InfoModule,
+    BrowserAnimationsModule,
     HttpModule,
     HttpClientModule,
-    MainModuleModule,
+    SharedModule,
+    PublicModule,
+    SchoolModule, 
     AppRoutingModule,
-    EditionsRoutingModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false })
   ],
-  providers: [LoadDataService, SnackbarService],
+  providers: [
+    EditionsService,
+    LoadDataService,
+     SnackbarService,
+      ErrorService,
+      MainProgressBarService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

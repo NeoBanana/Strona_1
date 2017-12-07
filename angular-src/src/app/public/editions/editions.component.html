@@ -1,0 +1,24 @@
+
+    <mat-card-content>
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Uczestnicy
+          </ng-template>
+          <div *ngIf="participants">
+            <editions-participants [participants]="participants">...</editions-participants>
+          </div>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Statystyki
+          </ng-template>
+            <editions-results>...</editions-results>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Wyniki
+          </ng-template>
+            <editions-statistics>...</editions-statistics>
+        </mat-tab>
+      </mat-tab-group>

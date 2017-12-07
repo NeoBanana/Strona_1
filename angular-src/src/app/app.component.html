@@ -1,26 +1,15 @@
+<mat-progress-bar *ngIf="progressDisplay" mode="query" [value]="progressState" color="accent"></mat-progress-bar>
 <nav>
   <app-navbar></app-navbar>
 </nav>
-<div class="wrapper">
-  <header> 
+<header> 
     loading header...
    </header>
-  <main >
-    <mat-card  class="scrollbar--invisible">
-      <mat-toolbar color="{{accent}}">
-        {{title}}
-      </mat-toolbar>
-        <mat-card-content>
-    <router-outlet>
-    
-    </router-outlet>
-        </mat-card-content>
-    </mat-card>
-  </main>
-  <aside class="side--right">
-    <widget-calendar></widget-calendar>
-    <widget-sponsors></widget-sponsors>
-  </aside>
+<div class="wrapper">
+
+   <router-outlet>
+      
+      </router-outlet>
 </div>
 <!-- <footer>
  loading footer...
