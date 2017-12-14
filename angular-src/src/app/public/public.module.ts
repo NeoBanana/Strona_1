@@ -8,7 +8,7 @@ import { PublicRoutingModule} from './public-router.module';
 
 import { SearchPipe } from '../shared/pipes/search.pipe';
 
-import { PublicComponent } from './public.component';
+
 
 import { HomeComponent } from './home/home.component';
 import { FormularzComponent} from './formularz/formularz.component';
@@ -17,14 +17,13 @@ import{ LoginComponent } from './login/login.component';
 import {EditionsModule } from './editions/editions.module';
 import { InfoModule } from './info/info.module';
 
-import { ApperanceService } from './services/apperance.service';
+import { ApperanceService } from 'app/shared/components/layout/services/apperance.service';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ContactComponent,
     FormularzComponent,
-    PublicComponent,
     LoginComponent,
     SearchPipe,
 ],

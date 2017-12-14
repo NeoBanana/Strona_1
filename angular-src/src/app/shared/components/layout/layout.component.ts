@@ -7,12 +7,12 @@ import {
     animate,
     transition
   } from '@angular/animations';
-import { ApperanceService } from './services/apperance.service';
+import { ApperanceService } from './services/apperance.service'; 
 import {Subscription} from 'rxjs/Subscription';
 @Component({
   selector: 'app-public',
-  templateUrl: './public.component.html',
-  styleUrls: ['./public.component.scss'],
+  templateUrl: './layout.component.html',
+  styleUrls: ['./layout.component.scss'],
   animations: [
     trigger('loaderLeft', [
       state('load', style({
@@ -36,7 +36,7 @@ import {Subscription} from 'rxjs/Subscription';
       ])
   ]
 })
-export class PublicComponent implements OnInit {
+export class LayoutComponent implements OnInit {
  public loadState = "load";
   titleSubscription:Subscription;
   accentSubscription:Subscription;
@@ -59,7 +59,7 @@ export class PublicComponent implements OnInit {
   }
   ngOnDestroy() {
     console.log("test"); 
-    this.loadState = "load"; 
+    
     // prevent memory leak when component is destroyed
     this.titleSubscription.unsubscribe();
     this.accentSubscription.unsubscribe();

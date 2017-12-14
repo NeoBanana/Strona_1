@@ -4,11 +4,13 @@ import { MaterialModule } from './modules/material.module';
 import { WidgetsModule } from './components/widgets/widgets.module';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms'; 
 import { RouterModule, Routes} from '@angular/router';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
+    RouterModule,
     WidgetsModule,
    
   ],
@@ -17,8 +19,9 @@ import { RouterModule, Routes} from '@angular/router';
     WidgetsModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LayoutComponent
   ],
-  declarations: []
+  declarations: [LayoutComponent]
 })
 export class SharedModule { }
