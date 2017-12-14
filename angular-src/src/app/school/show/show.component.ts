@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApperanceService} from 'app/shared/components/layout/services/apperance.service' 
 
 @Component({
   selector: 'app-show',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apperanceService:ApperanceService) { }
 
   ngOnInit() {
+    this.apperanceService.changeApperance( "fajna szkola");
   }
 
 }

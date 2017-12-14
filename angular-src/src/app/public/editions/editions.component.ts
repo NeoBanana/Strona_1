@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, Input  } from '@angular/core';
 import {  EditionsService } from 'app/shared/services/connect/data/editions/editions.service';
 import {  Edition, Participant } from 'app/shared/services/connect/data/data.models';
 import { ActivatedRoute, NavigationEnd } from '@angular/router';
-import { ApperanceService} from '../services/apperance.service' 
+import { ApperanceService} from 'app/shared/components/layout/services/apperance.service' 
 
 @Component({
   selector: 'public-editions',

@@ -5,13 +5,12 @@ import { FormsModule } from '@angular/forms';
  
 import { SharedModule } from 'app/shared/shared.module'; 
 
-import { SchoolComponent } from './school.component';
+ 
 import { SchoolRoutingModule } from 'app/school/school-router.module';
 import { ShowComponent } from './show/show.component';
 
 @NgModule({
   declarations: [
-    SchoolComponent,
     ShowComponent,
 ],
   imports: [
