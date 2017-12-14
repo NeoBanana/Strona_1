@@ -8,9 +8,21 @@ export class SnackbarService {
     public snackBar: MatSnackBar
   ) {}
   
-    popup(message:string,duration:number = 500) {
-      this.snackBar.open( message ,'close', {
+    popup(message:string, duration:number = 500, apperance:String="e") {
+      let view;
+      switch(apperance){
+        case "i":
+          view="snackbar-info";
+        break;
+        default:
+        view="snackbar-error";
+        break;
+      }
+      this.snackBar.open( message ,'', {
         duration: duration,
+        extraClasses: [view]
       });
     }
 }
+
+
