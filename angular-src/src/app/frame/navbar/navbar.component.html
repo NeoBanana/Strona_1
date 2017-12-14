@@ -14,5 +14,16 @@
   </button>
     <button mat-raised-button color="primary" routerLink="/contact" routerLinkActive="mat-accent">Dane Komitetow</button>
     <div class="flexSpacer"></div>
-    <button mat-raised-button color="accent" routerLink="/login" class="login" routerLinkActive="mat-warn">zaloguj</button>
+    <form [formGroup]="LoginGroup" (ngSubmit)="LogIn($event)" class="login__form" >
+      <mat-form-field  color="accent" >
+        <input matInput placeholder="Login" formControlName="login" resizeToFitContent required >
+      </mat-form-field>
+      <mat-form-field  color="accent">
+        <input matInput type="password" placeholder="Hasło" resizeToFitContent formControlName="pass" required >
+      </mat-form-field>
+       <button mat-raised-button color="accent"  class="login">zaloguj</button>
+     
+    </form>
+   
+    
 </mat-toolbar>

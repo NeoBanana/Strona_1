@@ -110,6 +110,11 @@ ol li {
 .halfWidth{
     width:50%;
 }
+.fullWidthOnMobile{
+    @media screen and (max-width: $mobileBreakpoint) {
+       width:100%;
+    }
+}
 .flexCentered{
     display:flex;
     flex-flow:column;
@@ -120,4 +125,12 @@ ol li {
 }
 .flexSpacer {
     flex: auto;
+}
+.snackbar-info{
+    color:#E0F2F1!important;
+    background:#009688!important;
+}
+.snackbar-error{
+    color:white!important;
+    background:#F44336!important;
 }

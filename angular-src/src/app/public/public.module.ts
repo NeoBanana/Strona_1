@@ -17,7 +17,6 @@ import{ LoginComponent } from './login/login.component';
 import {EditionsModule } from './editions/editions.module';
 import { InfoModule } from './info/info.module';
 
-import { ApperanceService } from 'app/shared/components/layout/services/apperance.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,7 @@ import { ApperanceService } from 'app/shared/components/layout/services/apperanc
     EditionsModule
  
   ],
-  providers: [ApperanceService],
+  providers: [],
   bootstrap: []
 })
 export class PublicModule { }

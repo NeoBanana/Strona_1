@@ -24,6 +24,8 @@ import { SchoolModule } from 'app/school/school.module';
 import { InvalidRouteComponent } from './invalid-route/invalid-route.component';
 import { MainProgressBarService } from './shared/services/progressbars/main-progress-bar.service';
 
+import { ApperanceService } from 'app/shared/components/layout/services/apperance.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +51,7 @@ import { MainProgressBarService } from './shared/services/progressbars/main-prog
      SnackbarService,
       ErrorService,
       MainProgressBarService,
+      ApperanceService
   ],
   bootstrap: [AppComponent]
 })

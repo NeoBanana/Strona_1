@@ -1,3 +1,4 @@
+@import '../../shared/style/variables';
 mat-toolbar{
     button{
     font-size:1.2rem!important;
@@ -6,11 +7,17 @@ mat-toolbar{
     }
 
 }
+/* When the input is not focused */
+ .mat-input-placeholder {
+    color: red!important;
+  }
+  
+
 @media screen and (max-width:800px){
     mat-toolbar{
         display: flex;
         flex-direction: column;
-        height: 13rem;
+        height:18rem;
         button{
             width: 100%;
             margin-right: 0;
@@ -24,4 +31,21 @@ mat-toolbar{
 
 .menu__link--active{ 
     color:green;
+}
+.login{
+    height: 2rem;
+    align-self: center;
+}
+.login__form{
+    
+    display: flex;
+    flex-flow:row ;
+    justify-content: space-around;
+    mat-form-field{
+        margin-right: 15px;
+    }
+    @media screen and (max-width: $mobileBreakpoint) {
+        flex-flow:row wrap ;
+        width:100%;
+    }
 }
