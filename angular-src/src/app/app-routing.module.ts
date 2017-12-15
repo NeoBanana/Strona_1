@@ -9,7 +9,9 @@ const appRoutes: Routes = [
 
   {path:'school',component: LayoutComponent, loadChildren:"./school/school.module#SchoolModule"},
   {path:'public', pathMatch: 'full', component: LayoutComponent, loadChildren:"./public/public.module#PublicModule"},
-  { path: '404', component:  InvalidRouteComponent }, 
+  { path: '404', component:  LayoutComponent, children:[
+    { path: '', component:  InvalidRouteComponent,data:{title:"blad strony",accent:"warn"}}
+  ]}, 
   { path: '**', redirectTo: '/404'}
 ]
 @NgModule({
@@ -23,3 +25,4 @@ const appRoutes: Routes = [
   ],
 })
 export class AppRoutingModule { }
+
