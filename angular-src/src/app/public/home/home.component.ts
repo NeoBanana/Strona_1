@@ -6,11 +6,14 @@ import { SnackbarService } from '../../shared/services/messages/snackbar.service
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  apperance : String ="i";
   constructor(private messages:SnackbarService) { }
 
+  /**
+   * popup snackbar message
+   */
   pop(){
-    this.messages.popup("test");
+    this.messages.popup("test",500,this.apperance);
   }
   ngOnInit() {
   }

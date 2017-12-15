@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SnackbarService } from 'app/shared/services/messages/snackbar.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'public-login',
+  selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginElement implements OnInit { 
   LoginGroup: FormGroup;
   constructor(private _formBuilder: FormBuilder,
     private messages:SnackbarService,
     private router: Router) { }
 
   ngOnInit() {
-    this.LoginGroup = this._formBuilder.group({
+    this.LoginGroup = this._formBuilder.group({ 
       login: ['', Validators.required],
       pass: ['', Validators.required]
       
     });
-  }
-  /** 
+  } 
+  /**
    * if form is submited
+   * @param event - submit event
    */
   LogIn(event){
     // Show the value of the form
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/login']);
     }
     else{
-      this.messages.popup("haslo poprawne",1000,"i");
+      this.messages.popup("haslo poprawne",1000,"s");
     }
   }
 

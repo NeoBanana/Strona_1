@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LoadDataService} from 'app/shared/services/connect/load-data.service';
+import { SponsorsService } from 'app/shared/services/connect/data/sponsors/sponsors.service';
  
 
 @Component({
@@ -9,10 +9,10 @@ import {LoadDataService} from 'app/shared/services/connect/load-data.service';
 })
 export class SponsorsComponent implements OnInit {
   sponsors:Array<any>;
-  constructor(private LoadDataService: LoadDataService) { }
+  constructor(private sponsorsService: SponsorsService) { }
 
   ngOnInit() {
-    this.LoadDataService.getSponsors()
+    this.sponsorsService.getSponsors()
     .subscribe(data => this.sponsors = data);
   }
 
