@@ -11,6 +11,9 @@ export class SnackbarService {
     popup(message:string, duration:number = 500, apperance:String="e") {
       let view;
       switch(apperance){
+        case "s":
+        view="snackbar-success";
+      break;
         case "i":
           view="snackbar-info";
         break;

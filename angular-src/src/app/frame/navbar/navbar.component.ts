@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EditionsService } from 'app/shared/services/connect/data/editions/editions.service';
 import { SnackbarService } from 'app/shared/services/messages/snackbar.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,11 +17,14 @@ export class NavbarComponent implements OnInit {
     login: ['', Validators.required],
     pass: ['', Validators.required]
   });
-  constructor(private editionsService: EditionsService, private _formBuilder: FormBuilder,private messages:SnackbarService) { }
+  constructor(private editionsService: EditionsService,
+     private _formBuilder: FormBuilder,
+     private messages:SnackbarService,
+     private router: Router) { }
 
   ngOnInit() {
 
-    this.editionsService.getEditionsNames()
+    this.editionsService.getEditions()
     .subscribe(data =>{ 
       this.editions = data;
     });
@@ -31,6 +35,7 @@ export class NavbarComponent implements OnInit {
   // { email: 'blah@blah.net', password: 'imnottelling1' }
     if(loginData.login !="admin" && loginData.pass !="admin"){
       this.messages.popup("haslo niepoprawne",1000);
+      this.router.navigate(['/login']);
     }
     else{
       this.messages.popup("haslo poprawne",1000,"i");
