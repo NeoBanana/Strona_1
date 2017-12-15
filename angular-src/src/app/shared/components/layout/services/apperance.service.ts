@@ -30,9 +30,21 @@ export class ApperanceService {
     });
  
   }
-
+  // 
+/**
+ * change title and/or color of main section header in layout
+ * @param title -new title 
+ * @param accent  - (optional) new color
+ */
   changeApperance(title,accent="primary") {
     this.title.next(title);
+    this.accent.next(accent);
+  }
+    /**
+     * change color of main section header in layout
+     * @param accent -  new color
+     */ 
+  changeColor(accent) {
     this.accent.next(accent);
   }
 

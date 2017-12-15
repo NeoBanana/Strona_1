@@ -3,13 +3,13 @@ export class Edition {
     nazwa: String;
     participants:Array<Participant>;
   }
-  export interface Participant {
+  export class Participant {
     region: string;
     city: String;
     school_type: String;
     school_name:String;
   }
-  export interface Class {
+  export class Class {
     class:String;
     language:String;
     guardian:String;

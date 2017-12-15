@@ -24,13 +24,13 @@ export class EditionsComponent implements OnInit {
  
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-          this.progressbar.toogle(true);
+          this.progressbar.toggle(true);
          let id = +this.route.snapshot.paramMap.get('id');
          this.service.getEdition(id).subscribe(data =>{
            this.edition=data;
            this.participants=data.participants;
            this.apperanceService.changeApperance( data.nazwa);
-           this.progressbar.toogle(false);
+           this.progressbar.toggle(false);
            
          });
        });

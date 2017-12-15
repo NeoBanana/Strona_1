@@ -5,6 +5,7 @@ import { WidgetsModule } from './components/widgets/widgets.module';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms'; 
 import { RouterModule, Routes} from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
+import { LoginElement } from 'app/shared/components/login/login.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     MaterialModule,
     RouterModule,
     WidgetsModule,
+    FormsModule,
+    ReactiveFormsModule,
    
   ],
   exports:[
@@ -20,8 +23,9 @@ import { LayoutComponent } from './components/layout/layout.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    LayoutComponent
+    LayoutComponent,
+    LoginElement
   ],
-  declarations: [LayoutComponent]
+  declarations: [LayoutComponent,LoginElement ]  
 })
 export class SharedModule { }

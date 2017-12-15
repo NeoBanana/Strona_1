@@ -14,18 +14,28 @@ export class EditionsService {
 
   constructor(private http :HttpClient, private error:ErrorService) { }
 
+  /**
+   * return all editions from database
+   */
     getEditions (): Observable<any[]> {
       return this.http.get<any[]>(this.url+"/editions")
         .pipe(
           catchError(this.error.handleError('getEditions', []))
         );
     }
+    /**
+     * return only names of editions from database
+     */
     getEditionsNames (): Observable<any[]> {
       return this.http.get<any[]>(this.url+"/editions?nazwa")
         .pipe(
           catchError(this.error.handleError('getEditionsNames', []))
         );
     }
+    /**
+     * return one edition from database
+     * @param id -edition id
+     */
     getEdition (id:number | String): Observable<Edition> {
       return this.http.get<any>(this.url+"/editions/"+id)
       .pipe(

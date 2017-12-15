@@ -8,6 +8,18 @@ export class SnackbarService {
     public snackBar: MatSnackBar
   ) {}
   
+
+    /**
+     * popup a message snackbar 
+     * 
+     * message, duration, apperance:
+     * - "e" : error
+     * - "i" : info
+     * - "s" : success
+     * @param message -text of message
+     * @param duration -how long is snackbar visible in miliseconds
+     * @param apperance -apperance: colors for snackbar: 
+     */
     popup(message:string, duration:number = 500, apperance:String="e") {
       let view;
       switch(apperance){

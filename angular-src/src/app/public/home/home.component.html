@@ -1,2 +1,15 @@
-strona glowna
-<button (click)="pop()">test </button>
+strona glowna<br />
+<mat-form-field>
+    <mat-select placeholder="Apperance of snackbar" [(value)]="apperance">
+      <mat-option  value="e">
+        error
+      </mat-option>
+      <mat-option  value="i">
+        info
+      </mat-option>
+      <mat-option  value="s">
+        success
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+<button (click)="pop()">pop</button>

@@ -16,7 +16,7 @@ import { FrameModule } from './frame/frame.module';
 
 import { PublicModule } from './public/public.module';
 import { AppRoutingModule } from './app-routing.module';
-import { LoadDataService } from 'app/shared/services/connect/load-data.service';
+
 import { SnackbarService } from 'app/shared/services/messages/snackbar.service';
 import { ErrorService } from 'app/shared/services/connect/error.service';
 import { EditionsService } from 'app/shared/services/connect/data/editions/editions.service';
@@ -25,6 +25,8 @@ import { InvalidRouteComponent } from './invalid-route/invalid-route.component';
 import { MainProgressBarService } from './shared/services/progressbars/main-progress-bar.service';
 
 import { ApperanceService } from 'app/shared/components/layout/services/apperance.service';
+import { SponsorsService } from 'app/shared/services/connect/data/sponsors/sponsors.service';
+import { ComitteesService } from 'app/shared/services/connect/data/comittees/comittees.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { ApperanceService } from 'app/shared/components/layout/services/apperanc
   ],
   providers: [
     EditionsService,
-    LoadDataService,
+    SponsorsService,
+    ComitteesService,
      SnackbarService,
       ErrorService,
       MainProgressBarService,

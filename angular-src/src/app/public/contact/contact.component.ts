@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {LoadDataService} from '../../shared/services/connect/load-data.service';
+import { ComitteesService } from 'app/shared/services/connect/data/comittees/comittees.service';
+import { MainProgressBarService } from 'app/shared/services/progressbars/main-progress-bar.service';
 
 @Component({
   selector: 'public-contact',
@@ -9,11 +10,17 @@ import {LoadDataService} from '../../shared/services/connect/load-data.service';
 export class ContactComponent implements OnInit {
  committees:Array<any>;
  filter:String ="";
-  constructor(private LoadDataService: LoadDataService) { }
+  constructor(private comitteesService: ComitteesService,
+    private progressbar:MainProgressBarService) { }
 
   ngOnInit() {
-    this.LoadDataService.getCommittees()
-    .subscribe(data => this.committees = data);
+    this.progressbar.toggle(true);
+    this. comitteesService.getCommittees()
+    .subscribe(data => {
+      this.committees = data;
+      this.progressbar.toggle(false);
+    }
+    );
   }
 
 }
