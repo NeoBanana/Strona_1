@@ -2,35 +2,114 @@
 <mat-vertical-stepper [linear]="true">
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
+      <ng-template matStepLabel>1 etap formularza</ng-template>
       <mat-form-field>
-        <input matInput placeholder="First name" formControlName="firstCtrl" required>
+          <mat-select placeholder="Województwo" formControlName="firstCtrl" [(value)]="wojewodztwo" required>
+              <mat-option value="test">
+                  Test
+              </mat-option>
+          </mat-select>
       </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Last name" formControlName="firstCtrl" required>
-      </mat-form-field>
+    <mat-form-field>
+          <mat-select placeholder="Powiat" formControlName="secondCtrl" [(value)]="powiat" required>
+                <mat-option value="test">
+                    Test
+                </mat-option>
+          </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+          <mat-select placeholder="Typ szkoły" formControlName="thirdCtrl" [(value)]="typeShool" required>
+              <mat-option value="test">
+                  Test
+              </mat-option>
+          </mat-select>
+    </mat-form-field>
       <div>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperNext>Dalej</button>
       </div>
     </form>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
+      <ng-template matStepLabel>2 etap formularza</ng-template>
       <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        <input matInput placeholder="Miejscowość" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Nazwa zespołu szkół">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Nazwa szkoły" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Szkoła imienia">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Dokładny adres szkoły
+        (tak jak na kopercie, bez nazwy szkoły)" matTextareaAutosize matAutosizeMinRows="4" matAutosizeMaxRows="10" formControlName="thirdCtrl" required></textarea>
+      </mat-form-field>
+      <br />	
+      <mat-form-field>
+        <input matInput placeholder="Telefon" formControlName="fourthCtrl" required>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Fax">
+      </mat-form-field>
+      <!-- <mat-form-field>
+          <input matInput placeholder="Email" [formControl]="emailFormControl"
+          [errorStateMatcher]="matcher">
+          <mat-hint>Errors appear instantly!</mat-hint>
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email jest <strong>obowiązkowy</strong>
+          </mat-error>
+      </mat-form-field> https://material.angular.io/components/input/overview Zrobisz maila? -->
+      <mat-form-field>
+          <input matInput placeholder="tytuł dyrektora" formControlName="sixthCtrl" required>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Imię dyrektora" formControlName="seventhCtrl" required>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Nazwisko dyrektora" formControlName="eighthCtrl" required>
       </mat-form-field>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperPrevious>Cofnji</button>
+        <button mat-button matStepperNext>Dalej</button>
       </div>
     </form>
   </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup" >
+    <ng-template matStepLabel>dane dotyczace nauczyciela koordynujacego przebieg konkursu w szkole:</ng-template>
+    <mat-form-field>
+        <input matInput placeholder="tytuł" formControlName="firstCtrl" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Imię" formControlName="secondCtrl" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Nazwisko" formControlName="thirdCtrl" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="E-Mail" formControlName="fourthCtrl" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Telefon kontaktowy" formControlName="fifthCtrl" required>
+    </mat-form-field>
+    <br /><input type="checkbox" name="test" id="test">
+        <span>Prosimy o zaznaczenie poniższego pola w przypadku chęci udziału koordynatora w pracach Komisji Sprawdzającej prace uczestników konkursu z etapu finałowego w swoim regionie. 
+            Na podstawie powyższej deklaracji Przewodniczący RKO MK „MBG” będzie mógł w razie potrzeby zaprosić koordynatora do udziału w sprawdzaniu prac konkursowych. 
+            O faktycznym udziale w pracach Komisji koordynator zdecyduje przyjmując bądź odrzucając otrzymane zaproszenie.
+            Jednocześnie informujemy, że wszystkie osoby zaangażowane w organizację i przebieg konkursu działają na zasadzie wolontariatu. Deklaracja współpracy jest całkowicie dobrowolna.
+        </span>
+    
     <div>
-      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperPrevious>Cofnji</button>
     </div>
+  </form>
   </mat-step>
 </mat-vertical-stepper>
