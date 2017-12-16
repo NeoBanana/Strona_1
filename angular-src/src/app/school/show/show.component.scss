@@ -1,0 +1,25 @@
+.contener{
+    width: 100%;
+    display: flex;
+    flex-flow:row wrap;
+}
+.side{
+    width: 19%; 
+    margin-right:2%;
+    button{
+        margin-top: 10px;
+        width: 100%;
+        background-color: #2196f3;
+    }
+}
+.main{
+    width: 79%;
+}
+.class{
+    display: flex;
+    flex-flow:row wrap;
+}
+.class__item{
+
+    flex:1 0 30%;
+}
