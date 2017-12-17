@@ -23,54 +23,45 @@ export class EditionsService {
   /**
    * return all editions from database
    */
-    getEditions (): Observable<IEdition[]> {
+    getEditions (): Observable<any> {
       this.progressBar.toggle(true);
-      return this.http.get(this.url+"/editions") 
+      return this.http.get<IEdition[]>(this.url+"/editions") 
       .map(response => <IEdition[]> response ) 
       .do(data =>{
         this.progressBar.toggle(false);
         data;
       } )  
       .catch(this.error.handleError('getEditions', [])); 
-      // return this.http.get<any[]>(this.url+"/editions")
-      //   .pipe(
-      //     catchError(this.error.handleError('getEditions', []))
-      //   );
+
     }
     /**
      * return only names of editions from database
      */
-    getEditionsNames (): Observable<IEdition[]> {
+    getEditionsNames (): Observable<any> {
       this.progressBar.toggle(true);
-      return this.http.get(this.url+"/editions") 
+      return this.http.get<IEdition[]>(this.url+"/editions") 
       .map(response => <IEdition[]> response ) 
       .do(data =>{
         this.progressBar.toggle(false);
         data;
       } )  
       .catch(this.error.handleError('getEditions', [])); 
-      // return this.http.get<any[]>(this.url+"/editions?nazwa")
-      //   .pipe(
-      //     catchError(this.error.handleError('getEditionsNames', []))
-      //   );
+
     }
     /**
      * return one edition from database
      * @param id -edition id
      */
-    getEdition (id:number | String): Observable<IEdition> {
+    getEdition (id:number | String): Observable<any> {
       this.progressBar.toggle(true);
-      return this.http.get(this.url+"/editions/"+id) 
-      .map(response =><IEdition[]> response )
+      return this.http.get<IEdition>(this.url+"/editions/"+id) 
+      .map(response=> <IEdition>response)
       .do(data =>{
         this.progressBar.toggle(false);
         data;
       } )  
-      .catch(this.error.handleError('getEditions', []))[0]; 
-      // return this.http.get<any>(this.url+"/editions/"+id)
-      // .pipe(
-      //   catchError(this.error.handleError('getEdition', []))
-      // );
+      .catch(this.error.handleError('getEditions', [])); 
+
     }
 }
 
