@@ -33,7 +33,7 @@ export class SnackbarService {
         view="snackbar-error";
         break;
       }
-      this.snackBar.open( message ,'', {
+      this.snackBar.open( message ,'zamknij'{
         duration: duration,
         extraClasses: [view]
       });

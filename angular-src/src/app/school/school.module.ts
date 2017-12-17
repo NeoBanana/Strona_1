@@ -7,11 +7,15 @@ import { SharedModule } from 'app/shared/shared.module';
 
  
 import { SchoolRoutingModule } from 'app/school/school-router.module';
-import { ShowComponent } from './show/show.component';
+import { SchoolProfileComponent } from './profile/profile.component';
+import { TeachersComponent } from './profile/teachers/teachers.component';
+import { ParticipationComponent } from './profile/participation/participation.component';
 
 @NgModule({
   declarations: [
-    ShowComponent,
+    SchoolProfileComponent,
+    TeachersComponent,
+    ParticipationComponent,
 ],
   imports: [
     CommonModule,

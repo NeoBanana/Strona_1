@@ -27,6 +27,7 @@ import { MainProgressBarService } from './shared/services/progressbars/main-prog
 import { ApperanceService } from 'app/shared/components/layout/services/apperance.service';
 import { SponsorsService } from 'app/shared/services/connect/data/sponsors/sponsors.service';
 import { ComitteesService } from 'app/shared/services/connect/data/comittees/comittees.service';
+import { SchoolsService } from './shared/services/connect/data/schools/schools.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ComitteesService } from 'app/shared/services/connect/data/comittees/com
      SnackbarService,
       ErrorService,
       MainProgressBarService,
-      ApperanceService
+      ApperanceService,
+      SchoolsService
   ],
   bootstrap: [AppComponent]
 })

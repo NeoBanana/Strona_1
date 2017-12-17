@@ -14,11 +14,9 @@ export class ContactComponent implements OnInit {
     private progressbar:MainProgressBarService) { }
 
   ngOnInit() {
-    this.progressbar.toggle(true);
     this. comitteesService.getCommittees()
     .subscribe(data => {
       this.committees = data;
-      this.progressbar.toggle(false);
     }
     );
   }

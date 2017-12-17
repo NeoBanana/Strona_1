@@ -1,15 +1,32 @@
-strona glowna<br />
-<mat-form-field>
+<article>
+  <h2> Snackbar example</h2>
+  <mat-form-field>
     <mat-select placeholder="Apperance of snackbar" [(value)]="apperance">
-      <mat-option  value="e">
+      <mat-option value="e">
         error
       </mat-option>
-      <mat-option  value="i">
+      <mat-option value="i">
         info
       </mat-option>
-      <mat-option  value="s">
+      <mat-option value="s">
         success
       </mat-option>
     </mat-select>
   </mat-form-field>
-<button (click)="pop()">pop</button>
+  <button (click)="pop()">pop</button>
+</article>
+
+<article>
+  <h2> example</h2>
+  <p>
+    testowa wiadomosc jaka... <a href="#">czytaj dalej...</a>
+  </p>
+
+</article>
+<article>
+  <h2> example2</h2>
+  <p>
+    testowa wiadomosc o co....<a href="#">czytaj dalej...</a>
+  </p>
+  
+</article>
