@@ -7,8 +7,9 @@ import { InvalidRouteComponent } from 'app/invalid-route/invalid-route.component
 
 const appRoutes: Routes = [
 
-  {path:'school',component: LayoutComponent, loadChildren:"./school/school.module#SchoolModule"},
-  {path:'public', pathMatch: 'full', component: LayoutComponent, loadChildren:"./public/public.module#PublicModule"},
+ 
+  {path:'', loadChildren:"./public/public.module#PublicModule"},
+  {path:'school', loadChildren:"./school/school.module#SchoolModule"},
   { path: '404', component:  LayoutComponent, children:[
     { path: '', component:  InvalidRouteComponent,data:{title:"blad strony",accent:"warn"}}
   ]}, 

@@ -13,25 +13,26 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppComponent } from './app.component';
 import { FrameModule } from './frame/frame.module';
 
-
-import { PublicModule } from './public/public.module';
 import { AppRoutingModule } from './app-routing.module';
-
-import { SnackbarService } from 'app/shared/services/messages/snackbar.service';
-import { ErrorService } from 'app/shared/services/connect/error.service';
-import { EditionsService } from 'app/shared/services/connect/data/editions/editions.service';
-import { SchoolModule } from 'app/school/school.module';
 import { InvalidRouteComponent } from './invalid-route/invalid-route.component';
-import { MainProgressBarService } from './shared/services/progressbars/main-progress-bar.service';
 
-import { ApperanceService } from 'app/shared/components/layout/services/apperance.service';
+
+
+import { EditionsService } from 'app/shared/services/connect/data/editions/editions.service';
 import { SponsorsService } from 'app/shared/services/connect/data/sponsors/sponsors.service';
 import { ComitteesService } from 'app/shared/services/connect/data/comittees/comittees.service';
 import { SchoolsService } from './shared/services/connect/data/schools/schools.service';
 
+
+import { ApperanceService } from 'app/shared/components/layout/services/apperance.service';
+import { MainProgressBarService } from './shared/services/progressbars/main-progress-bar.service';
+
+import { SnackbarService } from 'app/shared/services/messages/snackbar.service';
+import { ErrorService } from 'app/shared/services/connect/error.service';
+
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     InvalidRouteComponent,
 
 
@@ -42,8 +43,6 @@ import { SchoolsService } from './shared/services/connect/data/schools/schools.s
     HttpModule,
     HttpClientModule,
     SharedModule,
-    PublicModule,
-    SchoolModule, 
     AppRoutingModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false })
@@ -52,7 +51,7 @@ import { SchoolsService } from './shared/services/connect/data/schools/schools.s
     EditionsService,
     SponsorsService,
     ComitteesService,
-     SnackbarService,
+     SnackbarService,   
       ErrorService,
       MainProgressBarService,
       ApperanceService,
