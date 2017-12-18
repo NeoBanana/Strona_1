@@ -19,4 +19,4 @@ import { RulesComponent } from "./rules/rules.component";
     RulesComponent,
   ]
 })
-export class InfoModule { }
+export default class InfoModule { }

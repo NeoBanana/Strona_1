@@ -7,7 +7,7 @@ import { RulesComponent } from './rules/rules.component'
 
 
 const infoRoutes: Routes = [
-  { path: 'info',children:[
+  { path: '',children:[
     {path:'ogolne',component:GeneralComponent ,data:{title:"O Konkursie"}},
     {path:'regulaminy',component:RulesComponent,data:{title:"Regulaminy i Zasady"}},
     {path:'', redirectTo: '/info/ogolne' ,pathMatch: 'full'}

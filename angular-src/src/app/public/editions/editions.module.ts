@@ -24,5 +24,5 @@ import {ParticipantsComponent} from './participants/participants.component';
   ],
   providers: []
 })
-export class EditionsModule { }
+export default class EditionsModule { }
  
