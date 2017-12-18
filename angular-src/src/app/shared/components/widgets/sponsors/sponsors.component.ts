@@ -4,6 +4,7 @@ import { SponsorsService } from 'app/shared/services/connect/data/sponsors/spons
 
 @Component({
   selector: 'widgets-sponsors',
+  providers:[SponsorsService],
   templateUrl: './sponsors.component.html',
   styleUrls: ['./sponsors.component.scss']
 })

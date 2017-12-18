@@ -5,7 +5,7 @@ import {EditionsComponent} from './editions.component';
 
 
 const editionRoutes: Routes = [
-  { path: 'edycja',children:[
+  { path: '',children:[
   {path:':id',component:EditionsComponent,data:{title:'edycje'} }
 ]}
 ]

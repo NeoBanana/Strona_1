@@ -3,7 +3,7 @@ import { ErrorService } from 'app/shared/services/connect/error.service';
 import { Observable }            from 'rxjs/Observable'; 
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Edition, Participant, Class } from '../data.models';
+import { ISponsor } from '../data.models';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };

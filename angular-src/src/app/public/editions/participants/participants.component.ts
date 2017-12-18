@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges} from '@angular/core';
 
 import { MatTableDataSource } from '@angular/material';
-import { Participant } from 'app/shared/services/connect/data/data.models';
+import { IParticipant } from 'app/shared/services/connect/data/data.models';
 
 @Component({
   selector: 'editions-participants',
@@ -11,7 +11,7 @@ import { Participant } from 'app/shared/services/connect/data/data.models';
 export class ParticipantsComponent implements OnInit {
   @Input() participants: Array<any>;
   displayedColumns = ['region', 'city', 'school_type', 'school_name'];
-  dataSource: MatTableDataSource<Participant>;
+  dataSource: MatTableDataSource<IParticipant>;
   constructor() {
 
   }

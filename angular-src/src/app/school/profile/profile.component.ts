@@ -5,11 +5,11 @@ import { MainProgressBarService } from 'app/shared/services/progressbars/main-pr
 import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
-  selector: 'app-show',
-  templateUrl: './show.component.html',
-  styleUrls: ['./show.component.scss']
+  selector: 'school-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
-export class ShowComponent implements OnInit {
+export class SchoolProfileComponent implements OnInit {
 
   constructor(private apperanceService:ApperanceService,private comitteesService: ComitteesService,
     private progressbar:MainProgressBarService) { }

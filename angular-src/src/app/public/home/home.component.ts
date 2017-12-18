@@ -13,9 +13,10 @@ export class HomeComponent implements OnInit {
    * popup snackbar message
    */
   pop(){
-    this.messages.popup("test",500,this.apperance);
+    this.messages.popup("test",0,this.apperance);
   }
   ngOnInit() {
   }
 
 }
+

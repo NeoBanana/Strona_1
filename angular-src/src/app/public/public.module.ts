@@ -14,8 +14,6 @@ import { HomeComponent } from './home/home.component';
 import { FormularzComponent} from './formularz/formularz.component';
 import { ContactComponent } from './contact/contact.component';
 import{ LoginComponent } from './login/login.component';
-import {EditionsModule } from './editions/editions.module';
-import { InfoModule } from './info/info.module';
 
 
 @NgModule({
@@ -31,8 +29,7 @@ import { InfoModule } from './info/info.module';
     FormsModule,
     PublicRoutingModule,
     SharedModule,
-    InfoModule,
-    EditionsModule
+
  
   ],
   providers: [],

@@ -56,6 +56,7 @@ mat-card {
 
 html {
     height: 100%;
+
 }
 
 body {
@@ -65,6 +66,8 @@ body {
     padding: 0;
     height: 100%;
     background: $backgroundColor;
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
     * {
         box-sizing: border-box;
         font-family: "Dosis", sans-serif;
@@ -137,4 +140,11 @@ ol li {
 .snackbar-error{
     color:white!important;
     background:#F44336!important;
+}
+.flexTab{
+    display: flex;
+    flex-flow:row wrap;
+}
+.flexTab__item{
+    flex:1 0 30%;
 }
