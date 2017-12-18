@@ -16,8 +16,6 @@ import { FrameModule } from './frame/frame.module';
 import { AppRoutingModule } from './app-routing.module';
 import { InvalidRouteComponent } from './invalid-route/invalid-route.component';
 
-
-
 import { EditionsService } from 'app/shared/services/connect/data/editions/editions.service';
 import { SponsorsService } from 'app/shared/services/connect/data/sponsors/sponsors.service';
 import { ComitteesService } from 'app/shared/services/connect/data/comittees/comittees.service';
@@ -49,7 +47,6 @@ import { ErrorService } from 'app/shared/services/connect/error.service';
   ],
   providers: [
     EditionsService,
-    SponsorsService,
     ComitteesService,
      SnackbarService,   
       ErrorService,

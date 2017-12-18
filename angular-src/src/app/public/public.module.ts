@@ -38,4 +38,4 @@ import { InfoModule } from './info/info.module';
   providers: [],
   bootstrap: []
 })
-export class PublicModule { }
+export default class PublicModule { }
