@@ -27,4 +27,4 @@ import { ParticipationComponent } from './profile/participation/participation.co
   providers: [],
   bootstrap: []
 })
-export default class  SchoolModule { }
+export  class  SchoolModule { }

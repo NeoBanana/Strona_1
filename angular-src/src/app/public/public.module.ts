@@ -35,4 +35,4 @@ import{ LoginComponent } from './login/login.component';
   providers: [],
   bootstrap: []
 })
-export default class PublicModule { }
+export class PublicModule { }

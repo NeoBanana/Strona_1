@@ -9,7 +9,7 @@ import { SchoolProfileComponent } from 'app/school/profile/profile.component';
 
 
 const schoolRoutes: Routes = [
-    { path: '',component: LayoutComponent,children:[
+    { path: '',children:[
           {path:':id',component: SchoolProfileComponent, data:{title:"szkola"}},
   ]}
    

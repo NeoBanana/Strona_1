@@ -10,13 +10,13 @@ import { ContactComponent } from './contact/contact.component';
 import{ LoginComponent } from './login/login.component';
 
 const publicRoutes: Routes = [
-    { path: '',component: LayoutComponent, children:[
+    { path: '', children:[
           {path:'',component: HomeComponent, data:{title:"Strona główna"}},
           {path:'formularz',component: FormularzComponent, data:{title:"Formularz"}},
           {path:'contact',component: ContactComponent, data:{title:"Kontakt"}},
           {path:'login',component: LoginComponent, data:{title:"Login"}},
-          {path:'info', loadChildren:'./info/info.module' }, 
-          {path:'edycja', loadChildren:'./editions/editions.module' }, 
+          {path:'', loadChildren:'app/public/info/info.module#InfoModule' }, 
+          {path:'', loadChildren:'app/public/editions/editions.module#EditionsModule' }, 
     ]}
   
  
