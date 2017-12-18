@@ -15,8 +15,8 @@ const publicRoutes: Routes = [
           {path:'formularz',component: FormularzComponent, data:{title:"Formularz"}},
           {path:'contact',component: ContactComponent, data:{title:"Kontakt"}},
           {path:'login',component: LoginComponent, data:{title:"Login"}},
-          {path:'', loadChildren:'app/public/info/info.module#InfoModule' }, 
-          {path:'', loadChildren:'app/public/editions/editions.module#EditionsModule' }, 
+          {path:'info', loadChildren:'app/public/info/info.module#InfoModule' }, 
+          {path:'edycja', loadChildren:'app/public/editions/editions.module#EditionsModule' }, 
     ]}
   
  
